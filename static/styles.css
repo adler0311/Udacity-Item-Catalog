@@ -27,6 +27,7 @@ header {
 .header_row {
 	display:flex;
 	flex-wrap: wrap;
+	margin-right: 0;
 }
 
 .col_title {
@@ -35,7 +36,7 @@ header {
 }
 
 #col_login {
-	margin-top:20px;
+	margin-top:5%;
 }
 
 
@@ -73,22 +74,15 @@ body {
 	left: 50%;
 }
 
-.container_row {
-	display: flex;
-	flex-wrap: wrap;
-}
 
-.col_category {
-	width: 30%;
-}
 
-.col_items {
-	border-left: 1px solid gray;
-	width: 35%;
+@media (min-width: 1000px) {
+	.col_items {
+		border-left: 1px solid gray;
+	}
 }
 
 .col_add {
-	width:35%;
 	margin-top: 20px;
 
 }
