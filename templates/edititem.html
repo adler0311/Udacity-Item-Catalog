@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Edit Item</h2>
+<form action="{{url_for('editItem', item_id=item.id)}}" method="post">
+    <div class="form-group">
+		    <label>Title</label>
+    	  <input type="text" name='name' class="form-control" value="{{item.name}}">
+  	</div>
+  	<div class="form-group">
+    	  <label>Description</label>
+    	  <textarea class="form-control" name='description' rows="3">{{item.description}}</textarea>
+  	</div>
+  	<div class="form-group">
+    	  <label>Category</label>
+    	  <select class="form-control" name='category'>
+    		  {% for category in categories %}
+		  		  <option>{{category.id}}. {{category.name}}</option>
+		  	  {% endfor %}
+		    </select>
+	  </div>
+ 	  <button type="submit" class="btn btn-default">Submit</button>
+ 	  <a href="{{url_for('showCatalog')}}">Cancel</a>
+</form>
+
+{% endblock %}
