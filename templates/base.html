@@ -10,12 +10,11 @@
 </head>
 <body>
 	<header>
-		<div class="row">
-			<div class="col-md-2"></div>
-			<div class="col-md-7 col_title">
+		<div class="row header_row">
+			<div class="col_title">
 				<h1><a href="{{url_for('showCatalog')}}" id="link_white">Catalog App</a></h1>
 			</div>
-			<div class="col-md-3" id="col_login">
+			<div id="col_login">
 				{%if 'username' not in session %}
 					<button type="button" class="btn btn-danger btn_login"><a href="{{url_for('showLogin')}}" id="link_login">Login</a></button>
 				{% else %}
@@ -27,7 +26,7 @@
 	<section>
 		<div class="col-md-12">
 		</div>
-		<div class="container">
+		<div class="container ">
 			{% block content %}
 			{% endblock %}
 		</div>

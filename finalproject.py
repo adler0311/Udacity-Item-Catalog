@@ -267,11 +267,11 @@ def itemsJSON(category_id):
 @app.route('/')
 @app.route('/catalog')
 def showCatalog():
-	categories = session.query(Category).order_by(asc(Category.name)).all()
-	items = session.query(Item).order_by(desc(Item.id)).all()
-	if 'username' not in login_session:
+    categories = session.query(Category).order_by(asc(Category.name)).all()
+    items = session.query(Item).order_by(desc(Item.id)).all()
+    if 'username' not in login_session:
 		return render_template('publiccatalog.html', categories=categories, items=items)
-	else:
+    else:
 		return render_template('catalog.html', categories=categories, items = items)
 
 
