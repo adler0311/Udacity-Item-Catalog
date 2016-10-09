@@ -3,14 +3,14 @@
 <div class="col-md-3">
 	<h2>Categories</h2>
 		{% for category in categories %}
-			<p><a href="{{url_for('showItems', category_id=category.id)}}">{{category.name}}</a></p>
+			<p><a href="{{url_for('showItems', category_id=category.id)}}" id="link_category">{{category.name}}</a></p>
 		{% endfor %}
 </div>
-
-<div class="col-md-9">
+<div class="col-md-1 col_blank"></div>
+<div class="col-md-7">
 	<h2>{{category.name}} items({{items.count()}} items)</h2>
 	{% for item in items %}
-		<p><a href="{{url_for('showDescription', category_id=category.id, item_id=item.id)}}">{{item.name}}</a></p>
+		<p><a href="{{url_for('showDescription', category_id=category.id, item_id=item.id)}}" id="link_item">{{item.name}}</a></p>
 	{% endfor %}
 </div>
 {% endblock %}

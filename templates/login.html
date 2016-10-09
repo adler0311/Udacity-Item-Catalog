@@ -1,22 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 <!-- GOOGLE PLUS SIGN IN-->
-<div class="row">
-<div id="signinGoogle">
-  <span class="g-signin"
-        data-scope="openid email"
-        data-clientid="94674057394-12ved6hmlv3qdamfm31kdoa8mvfrcco3.apps.googleusercontent.com"
-        data-redirecturi="postmessage"
-        data-accesstype="offline"
-        data-cookiepolicy="single_host_origin"
-        data-callback="signInCallback"
-        data-approvalprompt="force">
-  </span>
-  <fb:login-button id="signinFacebook" scope="public_profile,email" onlogin="sendTokenToServer();">
-    <a href='javascript:sendTokenToServer()'>Login with Facebook</a>
+<div id="result"></div>
+<div class="row signin_row">
+  <div id="signinGoogle">
+    <span class="g-signin"
+          data-scope="openid email"
+          data-clientid="94674057394-12ved6hmlv3qdamfm31kdoa8mvfrcco3.apps.googleusercontent.com"
+          data-redirecturi="postmessage"
+          data-accesstype="offline"
+          data-cookiepolicy="single_host_origin"
+          data-callback="signInCallback"
+          data-approvalprompt="force">
+    </span>
+  </div>
+  <fb:login-button id="signinFacebook" scope="public_profile,email" onlogin="sendTokenToServer();" data-size="large">
+    <a href='javascript:sendTokenToServer()'>페이스북으로 로그인</a>
   </fb:login-button>
 </div>
-<div id="result"></div>
+
 
 <script>
 function signInCallback(authResult) {

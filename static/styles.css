@@ -1,18 +1,84 @@
+.container {
+	background-color: white;
+	min-height: 500px;
+	width:65%;
+	margin-top: 30px;
+	color: 	#4682B4;
+}
+
+p {
+	color: #000000;
+}
+/* unvisited link */
+#link_white:visited, #link_login, #link_logout {
+    color: #FFFAF0;
+    text-decoration: none;
+}
+#link_white:link, #link_login, #link_logout {
+    color: #FFFAF0;
+    text-decoration: none;
+}
+
 header {
 	background: #00008B;
 	text-decoration: none;
-	color: 	#191970;
 }
 
-.btn btn-warning {
-	margin-top: 30px;
+.col_title {
+	padding-left: 30px;
 }
 
-.container {
-	background-color: white;
-	width:70%;
+#col_login {
+	margin-top:20px;
+}
+
+
+.btn_login, .btn_logout {
+	height: 40px;
+	width: 90px;
+}
+
+#link_additem:visited, #link_addcategory:visited, #link_item:visited, #link_category:visited, #link_edit:visited, #link_delete:visited  {
+	color: #FF0000;
+    text-decoration: none;
+}
+
+#link_additem:link, #link_addcategory:link, #link_item:link, #link_category:link, #link_edit:link, #link_delete:link  {
+	color: #FF0000;
+    text-decoration: none;
 }
 
 body {
-	background-color: #555;
+	background-color: #B0C4DE;
+}
+
+.signin_row {
+	padding-left: 30%;
+	margin-top: 300px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#signinFacebook {
+	margin-left: 150px;
+}
+
+#result {
+	left: 50%;
+}
+
+.col_blank {
+	border-left: 1px solid gray;
+	height: 500px;
+	width: 8.34%;
+}
+
+
+.col_add {
+	margin-left: 80px;
+	margin-top: 20px;
+}
+
+#item_cat {
+	color: #808080;
 }

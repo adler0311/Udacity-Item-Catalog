@@ -12,14 +12,14 @@
 	<header>
 		<div class="row">
 			<div class="col-md-2"></div>
-			<div class="col-md-7">
-				<h1><a href="{{url_for('showCatalog')}}">Catalog App</a></h1>
+			<div class="col-md-7 col_title">
+				<h1><a href="{{url_for('showCatalog')}}" id="link_white">Catalog App</a></h1>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3" id="col_login">
 				{%if 'username' not in session %}
-					<button type="button" class="btn btn-warning"><a href="{{url_for('showLogin')}}">Login</a></button>
+					<button type="button" class="btn btn-danger btn_login"><a href="{{url_for('showLogin')}}" id="link_login">Login</a></button>
 				{% else %}
-					<button type="button" class="btn btn-warning"><a href="{{url_for('disconnect')}}">Logout </a></button>
+					<button type="button" class="btn btn-danger btn_logout"><a href="{{url_for('disconnect')}}" id="link_logout">Logout </a></button>
 				{% endif %}
 			</div>
 		</div>
