@@ -1,6 +1,7 @@
 .container {
 	background-color: white;
 	min-height: 500px;
+	min-width: 400px;
 	width:65%;
 	margin-top: 30px;
 	color: 	#4682B4;
@@ -20,6 +21,7 @@ p {
 }
 
 header {
+	min-width: 400px;
 	background: #00008B;
 	text-decoration: none;
 }
@@ -33,16 +35,17 @@ header {
 .col_title {
 	width: 75%;
 	padding-left: 20%;
+	margin-top:-0.2%;
 }
 
 #col_login {
-	margin-top:5%;
+	margin-top: 20px;
 }
 
 
 .btn_login, .btn_logout {
-	height: 40px;
-	width: 90px;
+	height: 35px;
+	width: 70px;
 }
 
 #link_additem:visited, #link_addcategory:visited, #link_item:visited, #link_category:visited, #link_edit:visited, #link_delete:visited  {
@@ -61,14 +64,20 @@ body {
 
 .signin_row {
 	padding-left: 30%;
+	padding-right: 30%;
 	margin-top: 300px;
 	display: flex;
 	flex-wrap: wrap;
 }
 
-#signinFacebook {
-	margin-left: 10%;
+
+@media (max-width: 500px) {
+	.sign_row {
+		padding-left: 20px;
+	}
 }
+
+
 
 #result {
 	left: 50%;
