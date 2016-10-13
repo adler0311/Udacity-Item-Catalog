@@ -325,8 +325,8 @@ def showItems(category_id):
         'items.html', categories=categories, category=category, items=items)
 
 
-@login_required
 @app.route('/catalog/item/new', methods=['GET', 'POST'])
+@login_required
 def newItem():
     categories = session.query(Category).order_by(asc(Category.name)).all()
     if request.method == 'POST':
@@ -342,15 +342,15 @@ def newItem():
         return render_template('newitem.html', categories=categories)
 
 
-@login_required
 @app.route('/catalog/<int:category_id>/<int:item_id>')
+@login_required
 def showDescription(category_id, item_id):
     item = session.query(Item).filter_by(id=item_id).one()
     return render_template('description.html', item=item)
 
 
-@login_required
 @app.route('/catalog/<int:item_id>/edit', methods=['GET', 'POST'])
+@login_required
 def editItem(item_id):
     categories = session.query(Category).all()
     item = session.query(Item).filter_by(id=item_id).one()
@@ -375,8 +375,8 @@ def editItem(item_id):
                                categories=categories)
 
 
-@login_required
 @app.route('/catalog/<int:item_id>/delete', methods=['GET', 'POST'])
+@login_required
 def deleteItem(item_id):
     deleteItem = session.query(Item).filter_by(id=item_id).one()
     print login_session['user_id']
